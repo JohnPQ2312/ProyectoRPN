@@ -129,6 +129,12 @@
   <ItemGroup>
     <ClCompile Include="ProyectoRPN.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdditionFunction.h" />
+    <ClInclude Include="DivisionFunction.h" />
+    <ClInclude Include="MultiplicationFunction.h" />
+    <ClInclude Include="SubtractionFunction.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
