@@ -32,5 +32,8 @@
     <ClInclude Include="DivisionFunction.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
+    <ClInclude Include="VerifyNumber.h">
+      <Filter>Archivos de origen</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

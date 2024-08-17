@@ -134,6 +134,7 @@
     <ClInclude Include="DivisionFunction.h" />
     <ClInclude Include="MultiplicationFunction.h" />
     <ClInclude Include="SubtractionFunction.h" />
+    <ClInclude Include="VerifyNumber.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

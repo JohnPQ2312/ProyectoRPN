@@ -1,12 +1,12 @@
 //Used Libraries
 #include <iostream>
 
-
 //Used .h files
 #include "AdditionFunction.h"
 #include "SubtractionFunction.h"
 #include "MultiplicationFunction.h"
 #include "DivisionFunction.h"
+#include "VerifyNumber.h"
 
 using namespace std;
 
@@ -16,6 +16,7 @@ int main()
 	float FirstValue;
 	float SecondValue;
 	char Operation;
+	bool process = true;
 
 	cout << "==========================================================================\n";
 	cout << "\n";
@@ -24,12 +25,23 @@ int main()
 	cout << "==========================================================================\n";
 	cout << "\n";
 
-	cout << "Introduzca el primer valor: \n";
-	cin >> FirstValue;
+	while (process = true) {
+		if (process) {
+			cout << "Ingrese el primer valor: ";
+			cin >> FirstValue;
+			while (VerifyNumber(FirstValue) == true) {
+				cout << "Ingrese el primer valor: ";
+				cin >> FirstValue;
 
-	cout << "Introduzca el segundo valor: \n";
-	cin >> SecondValue;
+			}
 
-	cout << "Introduzca la operacion a realizar: \n";
-	cin >> Operation;
+			cout << "Ingrese el segundo valor: ";
+			cin >> SecondValue;
+			while (VerifyNumber(SecondValue) == true) {
+				cout << "Ingrese el segundo valor: ";
+				cin >> SecondValue;
+			}
+
+		}
+	}
 }
