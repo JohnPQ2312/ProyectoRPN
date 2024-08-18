@@ -7,6 +7,7 @@
 #include "MultiplicationFunction.h"
 #include "DivisionFunction.h"
 #include "VerifyNumber.h"
+#include "colors.h" //Color Library (downloaded from internet)
 
 using namespace std;
 
@@ -19,11 +20,11 @@ int main()
 	char Operation;
 	bool FV_Input = true; //First Value Input
 
-	cout << "==========================================================================\n";
-	cout << "\n";
-	cout << "                       Calculadora Polaca Inversa                              \n";
-	cout << "\n";
-	cout << "==========================================================================\n";
+	cout << CYAN << "==========================================================================\n" << RESET;
+	cout << CYAN << "=                                                                        =" << "\n" << RESET;
+	cout << CYAN << "=" << RESET << "                      Calculadora Polaca Inversa" << CYAN << "                        =" << RESET << "\n";
+	cout << CYAN << "=                                                                        =" << "\n" << RESET;
+	cout << CYAN << "==========================================================================\n" << RESET;
 	cout << "\n";
 
 	while (true) {
@@ -49,31 +50,29 @@ int main()
 		cout << "Ingrese la operacion a realizar (+, -, *, /) o (=) para salir: ";
 		cin >> Operation;
 
-		switch (Operation) {
-			case '+':
-				result = AdditionFunction(FirstValue, SecondValue), cout << "\n";
-				break;
-
-			case '-':
-				result = SubtractionFunction(FirstValue, SecondValue), cout << "\n";
-				break;
-
-			case '*':
-				result = MultiplicationFunction(FirstValue, SecondValue), cout << "\n";
-				break;
-
-			case '/':
-				result = DivisionFunction(FirstValue, SecondValue), cout << "\n";
-				break;
-
-			case '=':
-				cout << "Resultado: " << result << "\n";
-				return 0;
-
-			default:
-				cout << "Operacion no valida \n";
-				continue;
-		}
+        if (Operation == '+') {
+            result = AdditionFunction(FirstValue, SecondValue);
+            cout << "\n";
+        }
+        else if (Operation == '-') {
+            result = SubtractionFunction(FirstValue, SecondValue);
+            cout << "\n";
+        }
+        else if (Operation == '*') {
+            result = MultiplicationFunction(FirstValue, SecondValue);
+            cout << "\n";
+        }
+        else if (Operation == '/') {
+            result = DivisionFunction(FirstValue, SecondValue);
+            cout << "\n";
+        }
+        else if (Operation == '=') {
+            cout << "Resultado: " << result << "\n";
+            return 0;
+        }
+        else {
+            cout << "Operacion no valida \n";
+        }
 
 		FirstValue = result;
 		cout << "Resultado: " << FirstValue << "\n";
