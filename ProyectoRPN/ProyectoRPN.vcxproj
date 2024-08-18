@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdditionFunction.h" />
+    <ClInclude Include="colors.h" />
     <ClInclude Include="DivisionFunction.h" />
     <ClInclude Include="MultiplicationFunction.h" />
     <ClInclude Include="SubtractionFunction.h" />

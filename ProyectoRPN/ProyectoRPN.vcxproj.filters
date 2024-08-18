@@ -35,5 +35,8 @@
     <ClInclude Include="VerifyNumber.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
+    <ClInclude Include="colors.h">
+      <Filter>Archivos de origen</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
