@@ -14,7 +14,7 @@ using namespace std;
 int main()
 {
 	//Variables
-	float FirstValue = 1;
+	float FirstValue = 0;
 	float SecondValue = 0;
 	float result = 0;
 	char Operation;
@@ -27,11 +27,11 @@ int main()
 	cout << CYAN << "==========================================================================\n" << RESET;
 	cout << "\n";
 
-	while (true) {
-		if (FV_Input) {
+	while (true) { //Infinite loop to keep the calculator running
+		if (FV_Input) { //First Value Input
 			cout << "Ingrese el primer valor: ";
 			cin >> FirstValue;
-			while (VerifyNumber(FirstValue) == true) {
+			while (VerifyNumber(FirstValue) == true) { //Verify if the input is a valid number
 				cout << "Ingrese el primer valor: ";
 				cin >> FirstValue;
 			}
@@ -40,21 +40,31 @@ int main()
 			cout << "Primer valor: " << FirstValue << "\n";
 		}
 
-		cout << "Ingrese el segundo valor: ";
-		cin >> SecondValue;
-		while (VerifyNumber(SecondValue) == true) {
+		cout << "Ingrese el segundo valor: "; 
+		cin >> SecondValue; 
+		while (VerifyNumber(SecondValue) == true) { //Verify if the input is a valid number
 			cout << "Ingrese el segundo valor: ";
 			cin >> SecondValue;
 		}
 
-		cout << "Ingrese la operacion a realizar (+, -, *, /) o (=) para salir: ";
-		cin >> Operation;
+        cout << "Ingrese la operacion a realizar (+, -, *, /) o (=) para salir: "; 
+        cin >> Operation; 
 
-        if (Operation == '+') {
+        //Operations
+		while (Operation != '+' && Operation != '-' && Operation != '*' && Operation != '/' && Operation != '=') { //Verify if the input is a valid operator
+			cout << RED << "==========================================================================\n" << RESET;
+            cout << "Operador invalido, ingrese uno de los indicados\n";
+			cout << RED << "==========================================================================\n" << RESET;
+			cout << "Ingrese la operacion a realizar (+, -, *, /) o (=) para salir: ";
+            cin >> Operation;
+			cout << "\n";
+        }
+
+        if (Operation == '+') { 
             result = AdditionFunction(FirstValue, SecondValue);
             cout << "\n";
         }
-        else if (Operation == '-') {
+        else if (Operation == '-') { 
             result = SubtractionFunction(FirstValue, SecondValue);
             cout << "\n";
         }
@@ -66,17 +76,15 @@ int main()
             result = DivisionFunction(FirstValue, SecondValue);
             cout << "\n";
         }
-        else if (Operation == '=') {
-			cout << LGREEN << "==========================================================================\n" << RESET;
+        else if (Operation == '=') { //Exit
+            cout << LGREEN << "==========================================================================\n" << RESET;
             cout << "Resultado: " << result << "\n";
-			cout << LGREEN << "==========================================================================\n" << RESET;
-			cout << RED << "Saliendo...\n" << RESET;
+            cout << LGREEN << "==========================================================================\n" << RESET;
+            cout << RED << "Saliendo...\n" << RESET;
             return 0;
         }
-        else {
-            cout << "Operacion no valida \n";
-        }
 
+		//Process before the next iteration
 		FirstValue = result;
 		cout << LGREEN << "==========================================================================\n" << RESET;
 		cout << "Resultado: " << FirstValue << "\n";
