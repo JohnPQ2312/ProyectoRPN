@@ -67,7 +67,10 @@ int main()
             cout << "\n";
         }
         else if (Operation == '=') {
+			cout << LGREEN << "==========================================================================\n" << RESET;
             cout << "Resultado: " << result << "\n";
+			cout << LGREEN << "==========================================================================\n" << RESET;
+			cout << RED << "Saliendo...\n" << RESET;
             return 0;
         }
         else {
@@ -75,7 +78,9 @@ int main()
         }
 
 		FirstValue = result;
+		cout << LGREEN << "==========================================================================\n" << RESET;
 		cout << "Resultado: " << FirstValue << "\n";
+		cout << LGREEN << "==========================================================================\n" << RESET;
 		system("pause");
 		system("cls");
 		cout << "\n";
