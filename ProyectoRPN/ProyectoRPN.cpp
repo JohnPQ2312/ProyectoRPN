@@ -41,11 +41,19 @@ int main()
 		}
 
 		cout << "Ingrese el segundo valor: "; 
-		cin >> SecondValue; 
+		cin >> SecondValue;
+		if (cin.peek() == '=') {
+			cout << LGREEN << "==========================================================================\n" << RESET;
+			cout << "Resultado: " << result << "\n";
+			cout << LGREEN << "==========================================================================\n" << RESET;
+			cout << RED << "Saliendo...\n" << RESET;
+			return 0;
+		}
 		while (VerifyNumber(SecondValue) == true) { //Verify if the input is a valid number
 			cout << "Ingrese el segundo valor: ";
 			cin >> SecondValue;
 		}
+
 
         cout << "Ingrese la operacion a realizar (+, -, *, /) o (=) para salir: "; 
         cin >> Operation; 

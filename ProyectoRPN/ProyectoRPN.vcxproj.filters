@@ -20,9 +20,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AdditionFunction.h">
-      <Filter>Archivos de origen</Filter>
-    </ClInclude>
     <ClInclude Include="SubtractionFunction.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
@@ -36,6 +33,9 @@
       <Filter>Archivos de origen</Filter>
     </ClInclude>
     <ClInclude Include="colors.h">
+      <Filter>Archivos de origen</Filter>
+    </ClInclude>
+    <ClInclude Include="AdditionFunction.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
   </ItemGroup>

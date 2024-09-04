@@ -20,7 +20,7 @@ bool VerifyNumber(float number) { // Function to verify if the input is a number
 		cout << RED << "==========================================================================\n" << RESET;
 		return true;
 	}
-	else if (cin.peek() == '+' || cin.peek() == '-' || cin.peek() == '/' || cin.peek() == '*' || cin.peek() == '=') { // Verify if it doesn't have any operator
+	else if (cin.peek() == '+' || cin.peek() == '-' || cin.peek() == '/' || cin.peek() == '*') { // Verify if it doesn't have any operator
 		cin.clear();
 		cin.ignore(1000000, '\n');
 		cout << RED << "==========================================================================\n" << RESET;
@@ -28,6 +28,7 @@ bool VerifyNumber(float number) { // Function to verify if the input is a number
 		cout << RED << "==========================================================================\n" << RESET;
 		return true;
 	}
+
 	else {
 		return false;
 	}
