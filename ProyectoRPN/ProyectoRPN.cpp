@@ -92,7 +92,7 @@ int main()
             return 0;
         }
 
-		//Process before the second iteration
+		//Process before the next iteration
 		FirstValue = result;
 		cout << LGREEN << "==========================================================================\n" << RESET;
 		cout << "Resultado: " << FirstValue << "\n";
